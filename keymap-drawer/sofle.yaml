@@ -118,9 +118,9 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - SPACE
   - '0'
   - .
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
   - {t: ▽, type: trans}
