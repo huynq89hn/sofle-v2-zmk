@@ -6,10 +6,10 @@ layers:
   - F3
   - F4
   - F5
-  - '&caps_word'
+  - F6
   - F7
   - F8
-  - F9
+  - '&caps_word'
   - F10
   - F11
   - F12
@@ -57,7 +57,7 @@ layers:
   - lower
   - {t: ENTER, h: raise}
   - SPACE
-  - SPACE
+  - '3'
   - RSHFT
   - UP ARROW
   - DOWN ARROW
@@ -88,9 +88,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+A
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
+  - ESC
+  - BACKSPACE
+  - DEL
   - DELETE
   - '-'
   - '4'
@@ -137,9 +137,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LCTRL
-  - {t: ▽, type: trans}
+  - '&msc SCRL_LEFT'
   - UP ARROW
-  - {t: ▽, type: trans}
+  - '&msc SCRL_RIGHT'
   - PAGE UP
   - {t: ▽, type: trans}
   - '&'
@@ -149,9 +149,9 @@ layers:
   - ']'
   - {type: held}
   - LALT
-  - ESC
-  - BACKSPACE
-  - DELETE
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
   - PAGE DOWN
   - _
   - $
@@ -181,5 +181,66 @@ layers:
   - {t: ▽, type: trans}
   - )
   - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  '3':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UP ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN ARROW
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
