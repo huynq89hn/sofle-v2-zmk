@@ -6,7 +6,7 @@ layers:
   - F3
   - F4
   - F5
-  - F6
+  - '&caps_word'
   - F7
   - F8
   - F9
