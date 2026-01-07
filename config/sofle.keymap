@@ -41,14 +41,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp F1    &kp F2  &kp F3          &kp F4           &kp CLCK   &kp F6                           &kp F7     &kp F8     &kp F9        &kp F10         &kp F11   &kp F12
-&kp TAB   &kp Q   &kp W           &kp F            &kp P      &kp B                            &kp J      &kp L      &kp U         &kp Y           &kp SEMI  &kp RGUI
-&mo 2     &kp A   &kp R           &kp S            &kp T      &kp G                            &kp M      &kp N      &kp E         &kp I           &kp O     &kp APOS
-&kp LALT  &kp Z   &kp X           &kp C            &kp D      &kp V   &kp C_MUTE    &kp ESC    &kp K      &kp H      &kp COMMA     &kp DOT         &kp FSLH  &kp RCTRL
-                  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LSHFT  &mo 1   &mo 2         &kp ENTER  &kp SPACE  &kp RSHFT  &kp UP_ARROW  &kp DOWN_ARROW
+&kp F1    &kp F2  &kp F3          &kp F4           &kp F5     &kp F6                            &kp F7     &kp F8     &kp F9        &kp F10         &kp F11   &kp F12
+&kp TAB   &kp Q   &kp W           &kp F            &kp P      &kp B                             &kp J      &kp L      &kp U         &kp Y           &kp SEMI  &kp RGUI
+&mo 2     &kp A   &kp R           &kp S            &kp T      &kp G                             &kp M      &kp N      &kp E         &kp I           &kp O     &kp APOS
+&kp LALT  &kp Z   &kp X           &kp C            &kp D      &kp V   &kp C_MUTE     &kp ESC    &kp K      &kp H      &kp COMMA     &kp DOT         &kp FSLH  &kp RCTRL
+                  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &kp SPACE  &kp RSHFT  &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
