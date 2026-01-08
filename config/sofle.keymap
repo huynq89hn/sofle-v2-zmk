@@ -88,13 +88,15 @@
 
             bindings = <
 &trans  &trans     &trans          &trans          &trans             &trans                             &trans                 &trans           &trans        &trans                &trans                &trans
-&trans  &kp LCTRL  &msc SCRL_LEFT  &kp UP_ARROW    &msc SCRL_RIGHT    &kp PAGE_UP                        &trans                 &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans  &kp LALT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN                      &kp UNDERSCORE         &kp DOLLAR       &kp PERCENT   &kp CARET             &kp LESS_THAN         &kp GREATER_THAN
+&trans  &kp LCTRL  &msc SCRL_LEFT  &kp UP_ARROW    &msc SCRL_RIGHT    &msc SCRL_UP                       &trans                 &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans  &kp LALT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &msc SCRL_DOWN                     &kp UNDERSCORE         &kp DOLLAR       &kp PERCENT   &kp CARET             &kp LESS_THAN         &kp GREATER_THAN
 &trans  &trans     &trans          &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans    &trans  &kp EQUAL              &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &kp PIPE
                    &trans          &kp SPACE       &kp ENTER          &trans           &trans    &trans  &kp RIGHT_PARENTHESIS  &kp PERIOD       &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_3 {
