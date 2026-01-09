@@ -17,14 +17,7 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos { compatible = "zmk,combos"; };
 
@@ -46,7 +39,7 @@
 &kp TAB   &kp Q   &kp W           &kp F            &kp P      &kp B                             &kp J   &kp L      &kp U         &kp Y           &kp SEMI  &kp RGUI
 &mo 2     &kp A   &kp R           &kp S            &kp T      &kp G                             &kp M   &kp N      &kp E         &kp I           &kp O     &kp APOS
 &kp LALT  &kp Z   &kp X           &kp C            &kp D      &kp V   &kp C_MUTE     &kp ESC    &kp K   &kp H      &kp COMMA     &kp DOT         &kp FSLH  &kp RCTRL
-                  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 3   &kp RSHFT  &kp UP_ARROW  &kp DOWN_ARROW
+                  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 0   &kp RSHFT  &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings =
@@ -101,11 +94,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans           &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans
             >;
         };
     };
