@@ -51,16 +51,16 @@ layers:
   - .
   - /
   - RCTRL
-  - LEFT ARROW
-  - RIGHT ARROW
+  - DOWN
+  - UP ARROW
   - LSHFT
   - lower
   - {t: ENTER, h: raise}
   - SPACE
-  - default
+  - '3'
   - RSHFT
-  - UP ARROW
-  - DOWN ARROW
+  - LEFT
+  - RIGHT
   lower:
   - BT CLR
   - {t: BT, h: '0'}
@@ -240,7 +240,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
