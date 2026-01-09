@@ -17,21 +17,17 @@
 #define TOPNUM 4
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-    };
-
-    combos {
-        compatible = "zmk,combos";
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         /* ================= BASE (FUNCTION ROW) ================= */
-        default_layer {
-            label = "default";
+        base_layer {
+            label = "BASE";
 
             bindings = <
 &kp F1    &kp F2  &kp F3    &kp F4        &kp F5     &kp F6                            &kp F7  &kp F8     &caps_word  &kp F10    &kp F11   &kp F12
-&kp TAB   &kp Q   &kp W     &kp F         &kp P      &kp B                             &kp J   &kp L      &kp U       &kp Y
+&kp TAB   &kp Q   &kp W     &kp F         &kp P      &kp B                             &kp J   &kp L      &kp U       &kp Y      &kp SEMI  &kp RGUI
+&mo 2     &kp A   &kp R     &kp S         &kp T      &kp G                             &kp M   &kp N      &kp E       &kp I
