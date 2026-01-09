@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  BASE:
+  default:
   - F1
   - F2
   - F3
@@ -25,7 +25,7 @@ layers:
   - Y
   - ;
   - RGUI
-  - RAISE
+  - raise
   - A
   - R
   - S
@@ -52,16 +52,16 @@ layers:
   - /
   - RCTRL
   - DOWN
-  - UP
+  - UP ARROW
   - LSHFT
-  - LOWER
-  - {t: ENTER, h: RAISE}
+  - lower
+  - {t: ENTER, h: raise}
   - SPACE
-  - ADJUST
+  - '3'
   - RSHFT
   - LEFT
   - RIGHT
-  LOWER:
+  lower:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -122,7 +122,7 @@ layers:
   - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  RAISE:
+  raise:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -137,10 +137,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LCTRL
-  - '&msc MS_X -1'
-  - UP
-  - '&msc MS_X 1'
-  - '&msc MS_Y 1'
+  - '&msc SCRL_LEFT'
+  - UP ARROW
+  - '&msc SCRL_RIGHT'
+  - '&msc SCRL_UP'
   - {t: ▽, type: trans}
   - '&'
   - '*'
@@ -149,10 +149,10 @@ layers:
   - ']'
   - {type: held}
   - LALT
-  - LEFT
-  - DOWN
-  - RIGHT
-  - '&msc MS_Y -1'
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - '&msc SCRL_DOWN'
   - _
   - $
   - '%'
@@ -183,7 +183,7 @@ layers:
   - .
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  ADJUST:
+  '3':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -204,7 +204,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - UP
+  - UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -241,67 +241,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  TOPNUM:
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
