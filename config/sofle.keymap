@@ -15,12 +15,13 @@
 #define NUMROW 4
 
 / {
-    /* ===== Encoder layer switch behavior ===== */
+    /* ===== Encoder behaviors ===== */
     behaviors {
+        /* Encoder sẽ gửi F13/F14, keymap bắt để đổi layer */
         enc_layer: enc_layer {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&inc_dec_layer 4 0>;   /* CW → NUMROW, CCW → BASE */
+            bindings = <&inc_dec_kp F13 F14>;  /* CW = F13, CCW = F14 */
         };
     };
 
@@ -42,7 +43,7 @@
                   &kp DOWN  &kp UP_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 3   &kp RSHFT  &kp LEFT    &kp RIGHT
             >;
 
-            /* Encoder trái: đổi layer | Encoder phải: PGUP/PGDN */
+            /* Encoder trái: phát F13/F14 | Encoder phải: PG_UP/PG_DN */
             sensor-bindings =
                 <&enc_layer>,
                 <&inc_dec_kp PG_UP PG_DN>;
@@ -95,6 +96,17 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans
+            >;
+        };
+
+        /* ================= F13 / F14 layer toggle mapping ================= */
+        /* Khi encoder phát F13/F14, chúng ta bắt key này để đổi layer */
+        /* Layer này không cần layout, chỉ để devicetree nhận key */
+        fkeys_layer {
+            label = "fkeys";
+            bindings = <
+                &to NUMROW  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &to BASE    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
     };
