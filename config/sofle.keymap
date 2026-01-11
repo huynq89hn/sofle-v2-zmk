@@ -15,6 +15,15 @@
 #define NUMROW 4
 
 / {
+    /* ===== Encoder layer switch behavior ===== */
+    behaviors {
+        enc_layer: enc_layer {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&inc_dec_layer 4 0>;   /* CW → NUMROW, CCW → BASE */
+        };
+    };
+
     conditional_layers { compatible = "zmk,conditional-layers"; };
     combos { compatible = "zmk,combos"; };
 
@@ -33,13 +42,13 @@
                   &kp DOWN  &kp UP_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 3   &kp RSHFT  &kp LEFT    &kp RIGHT
             >;
 
-            /* Encoder trái = layer số, encoder phải giữ nguyên */
+            /* Encoder trái: đổi layer | Encoder phải: PGUP/PGDN */
             sensor-bindings =
-                <&to NUMROW &to BASE>,
+                <&enc_layer>,
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
-        /* ================= NUMROW (F-row → Number row) ================= */
+        /* ================= NUMROW ================= */
         numrow_layer {
             label = "numrow";
 
