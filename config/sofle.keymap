@@ -28,6 +28,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&tog 3>, <&tog 0>;
         };
+
+        new_behavior1: new_behavior1 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "NEW_BEHAVIOR1";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+        };
     };
 
     keymap {
@@ -51,9 +58,7 @@
                   &kp DOWN  &kp UP_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 0   &kp RSHFT  &kp LEFT    &kp RIGHT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&new_behavior1>, <&new_behavior>;
         };
 
         lower_layer {
@@ -75,7 +80,7 @@
                           &trans        &trans         &trans        &trans        &trans    &trans  &kp N0     &kp PERIOD  &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&new_behavior1>, <&new_behavior>;
         };
 
         raise_layer {
@@ -96,9 +101,7 @@
                    &trans          &kp SPACE       &kp ENTER          &trans           &trans    &trans  &kp RIGHT_PARENTHESIS  &kp PERIOD       &trans        &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&new_behavior1>, <&new_behavior>;
         };
 
         layer_4 {
@@ -111,7 +114,7 @@
                             &kp DOWN      &kp UP_ARROW  &kp LSHFT  &mo 1         &lt 2 ENTER    &kp SPACE  &mo 0   &kp RSHFT  &kp LEFT   &kp RIGHT
             >;
 
-            sensor-bindings = <&new_behavior>, <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&new_behavior1>, <&new_behavior>;
         };
     };
 };
