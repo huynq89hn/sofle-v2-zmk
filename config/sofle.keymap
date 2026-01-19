@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "NEW_BEHAVIOR";
             #sensor-binding-cells = <0>;
-            bindings = <&none>, <&none>;
+            bindings = <&tog 3>, <&tog 0>;
         };
     };
 
@@ -111,9 +111,7 @@
                             &kp DOWN      &kp UP_ARROW  &kp LSHFT  &mo 1         &lt 2 ENTER    &kp SPACE  &mo 0   &kp RSHFT  &kp LEFT   &kp RIGHT
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&new_behavior>, <&inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
