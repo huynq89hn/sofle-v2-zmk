@@ -53,6 +53,8 @@
 &kp LALT  &kp Z   &kp X     &kp C         &kp D      &kp V   &kp C_MUTE     &kp ESC    &kp K   &kp H      &kp COMMA   &kp DOT    &kp FSLH  &kp RCTRL
                   &kp DOWN  &kp UP_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 3   &kp RSHFT  &kp LEFT    &kp RIGHT
             >;
+
+            sensor-bindings = <&new_behavior>, <&inc_dec_kp 0 0>;
         };
 
         lower_layer {
@@ -108,6 +110,8 @@
 &kp LALT  &kp Z   &kp X     &kp C         &kp D      &kp V   &kp K          &kp H      &kp H   &kp COMMA  &kp DOT         &kp FSLH   &trans     &kp RCTRL
                   &kp DOWN  &kp UP_ARROW  &kp RSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &trans  &kp RSHFT  &kp LEFT_ARROW  &kp RIGHT
             >;
+
+            sensor-bindings = <&new_behavior>;
         };
     };
 };
