@@ -14,24 +14,12 @@
 #define RAISE 2
 #define ADJUST 3
 
-&tog {
-};
-
 / {
     // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos { compatible = "zmk,combos"; };
-
-    behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "NEW_BEHAVIOR";
-            #sensor-binding-cells = <0>;
-            bindings = <&tog 3>, <&tog 0>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -47,16 +35,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp F1    &kp F2  &kp F3    &kp F4        &kp F5     &kp F6                            &kp F7      &kp F8     &kp F9     &kp F10    &kp F11   &kp F12
-&kp TAB   &kp Q   &kp W     &kp F         &kp P      &kp B                             &kp J       &kp L      &kp U      &kp Y      &kp SEMI  &kp RGUI
-&mo 2     &kp A   &kp R     &kp S         &kp T      &kp G                             &kp M       &kp N      &kp E      &kp I      &kp O     &kp APOS
-&kp LALT  &kp Z   &kp X     &kp C         &kp D      &kp V   &kp C_MUTE     &kp ESC    &kp K       &kp H      &kp COMMA  &kp DOT    &kp FSLH  &kp RCTRL
-                  &kp DOWN  &kp UP_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &caps_word  &kp RSHFT  &kp LEFT   &kp RIGHT
+&kp F1    &kp F2  &kp F3    &kp F4        &kp F5     &kp F6                            &kp F7  &kp F8     &caps_word  &kp F10    &kp F11   &kp F12
+&kp TAB   &kp Q   &kp W     &kp F         &kp P      &kp B                             &kp J   &kp L      &kp U       &kp Y      &kp SEMI  &kp RGUI
+&mo 2     &kp A   &kp R     &kp S         &kp T      &kp G                             &kp M   &kp N      &kp E       &kp I      &kp O     &kp APOS
+&kp LALT  &kp Z   &kp X     &kp C         &kp D      &kp V   &kp C_MUTE     &kp ESC    &kp K   &kp H      &kp COMMA   &kp DOT    &kp FSLH  &kp RCTRL
+                  &kp DOWN  &kp UP_ARROW  &kp LSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &mo 3   &kp RSHFT  &kp LEFT    &kp RIGHT
             >;
 
             sensor-bindings =
-                <&new_behavior>,
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -78,9 +66,7 @@
                           &trans        &trans         &trans        &trans        &trans    &trans  &kp N0     &kp PERIOD  &trans        &trans
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -94,11 +80,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans     &trans          &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(NUMBER_2)))  &kp LA(LC(LG(NUMBER_3)))                    &trans                 &trans           &trans        &trans                &trans                &trans
-&trans  &kp LCTRL  &msc SCRL_LEFT  &kp UP_ARROW              &msc SCRL_RIGHT           &msc SCRL_UP                                &trans                 &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans  &kp LALT   &kp LEFT_ARROW  &kp DOWN_ARROW            &kp RIGHT_ARROW           &msc SCRL_DOWN                              &kp UNDERSCORE         &kp DOLLAR       &kp PERCENT   &kp CARET             &kp LESS_THAN         &kp GREATER_THAN
-&trans  &trans     &trans          &kp C_MUTE                &kp C_VOLUME_DOWN         &kp C_VOLUME_UP           &trans    &trans  &kp EQUAL              &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &kp PIPE
-                   &trans          &kp SPACE                 &kp ENTER                 &trans                    &trans    &trans  &kp RIGHT_PARENTHESIS  &kp PERIOD       &trans        &trans
+&trans  &trans     &trans          &trans          &trans             &trans                             &trans                 &trans           &trans        &trans                &trans                &trans
+&trans  &kp LCTRL  &msc SCRL_LEFT  &kp UP_ARROW    &msc SCRL_RIGHT    &msc SCRL_UP                       &trans                 &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans  &kp LALT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &msc SCRL_DOWN                     &kp UNDERSCORE         &kp DOLLAR       &kp PERCENT   &kp CARET             &kp LESS_THAN         &kp GREATER_THAN
+&trans  &trans     &trans          &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans    &trans  &kp EQUAL              &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp NON_US_BACKSLASH  &kp PIPE
+                   &trans          &kp SPACE       &kp ENTER          &trans           &trans    &trans  &kp RIGHT_PARENTHESIS  &kp PERIOD       &trans        &trans
             >;
 
             sensor-bindings =
@@ -108,16 +94,12 @@
 
         layer_3 {
             bindings = <
-&kp N1    &kp N2  &kp N3    &kp N4        &kp N5     &kp N6                            &kp N7  &kp N8     &kp N9          &kp N0     &kp MINUS  &kp EQUAL
-&kp TAB   &kp Q   &kp W     &kp F         &kp P      &kp B                             &kp J   &kp L      &kp U           &kp Y      &kp SEMI   &trans
-&kp CAPS  &kp A   &kp R     &kp S         &kp T      &kp G                             &kp M   &kp N      &kp E           &kp I      &kp O      &kp APOS
-&kp LALT  &kp Z   &kp X     &kp C         &kp D      &kp V   &kp K          &kp H      &kp H   &kp COMMA  &kp DOT         &kp FSLH   &trans     &kp RCTRL
-                  &kp DOWN  &kp UP_ARROW  &kp RSHFT  &mo 1   &lt 2 ENTER    &kp SPACE  &trans  &kp RSHFT  &kp LEFT_ARROW  &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans
             >;
-
-            sensor-bindings =
-                <&new_behavior>,
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
     };
 };
