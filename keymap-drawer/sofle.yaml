@@ -81,7 +81,7 @@ layers:
   - '&msc SCRL_LEFT'
   - UP ARROW
   - '&msc SCRL_RIGHT'
-  - '&msc SCRL_UP'
+  - PAGE UP
   - {t: ▽, type: trans}
   - '&'
   - '*'
@@ -93,7 +93,7 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - '&msc SCRL_DOWN'
+  - PAGE DOWN
   - _
   - $
   - '%'
