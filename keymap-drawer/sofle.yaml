@@ -1,7 +1,66 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, TAB, Q, W, F, P, B, J, L, U, Y, ;, RGUI, CAPSLOCK, A, R, S, T, G, M, N, E, I, O, '''', LALT, Z, X,
-    C, D, V, MUTE, ESC, K, H, ',', ., /, RCTRL, DOWN, UP ARROW, LSHFT, lower, raise, SPACE, ENTER, RSHFT, LEFT, RIGHT]
+  default:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - TAB
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - RGUI
+  - CAPSLOCK
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - I
+  - O
+  - ''''
+  - LALT
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - MUTE
+  - ESC
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - RCTRL
+  - DOWN
+  - UP ARROW
+  - LSHFT
+  - lower
+  - {t: ENTER, h: raise}
+  - SPACE
+  - raise
+  - RSHFT
+  - LEFT
+  - RIGHT
   lower:
   - BT CLR
   - {t: BT, h: '0'}
