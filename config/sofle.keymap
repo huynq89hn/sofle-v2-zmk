@@ -8,7 +8,6 @@ ZMK_HOLD_TAP(hml,
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;
 )
-
 /* Right-hand HRMs. */
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
@@ -19,7 +18,6 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
 )
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
