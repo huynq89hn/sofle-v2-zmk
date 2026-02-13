@@ -51,16 +51,16 @@ layers:
   - .
   - /
   - RCTRL
-  - DOWN
-  - UP ARROW
+  - LEFT
+  - RIGHT
   - raise
   - lower
   - {t: ENTER, h: LEFT SHIFT}
   - {t: SPACE, h: RIGHT SHIFT}
   - raise
   - RSHFT
-  - LEFT
-  - RIGHT
+  - UP ARROW
+  - DOWN
   lower:
   - BT CLR
   - {t: BT, h: '0'}
