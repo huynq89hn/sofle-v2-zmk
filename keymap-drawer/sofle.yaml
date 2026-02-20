@@ -1,66 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - TAB
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ;
-  - RGUI
-  - CAPSLOCK
-  - A
-  - R
-  - S
-  - T
-  - G
-  - M
-  - N
-  - E
-  - I
-  - O
-  - ''''
-  - LALT
-  - Z
-  - X
-  - C
-  - D
-  - V
-  - MUTE
-  - ESC
-  - K
-  - H
-  - ','
-  - .
-  - /
-  - RCTRL
-  - LEFT
-  - RIGHT
-  - raise
-  - lower
-  - {t: ENTER, h: LEFT SHIFT}
-  - {t: SPACE, h: RIGHT SHIFT}
-  - raise
-  - RSHFT
-  - UP ARROW
-  - DOWN
+  default: [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, TAB, Q, W, F, P, B, J, L, U, Y, ;, RGUI, raise, A, R, S, T, G, M, N, E, I, O, '''', LALT, Z, X, C,
+    D, V, MUTE, ESC, K, H, ',', ., /, RCTRL, LEFT, RIGHT, LEFT SHIFT, lower, raise, SPACE, ENTER, RSHFT, UP ARROW, DOWN]
   lower:
   - BT CLR
   - {t: BT, h: '0'}
@@ -76,7 +17,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - CAPS
   - LEFT CONTROL
   - HOME
   - END
@@ -137,7 +78,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LCTRL
-  - '&msc SCRL_LEFT'
+  - TAB
   - UP ARROW
   - '&msc SCRL_RIGHT'
   - PAGE UP
@@ -147,7 +88,7 @@ layers:
   - (
   - '['
   - ']'
-  - {t: ▽, type: trans}
+  - {type: held}
   - LALT
   - LEFT ARROW
   - DOWN ARROW
@@ -175,8 +116,8 @@ layers:
   - Sft+}
   - {t: ▽, type: trans}
   - SPACE
-  - {t: ENTER, type: held}
-  - {t: ▽, type: trans}
+  - Alt+ENTER
+  - Ctl+ENTER
   - {t: ▽, type: trans}
   - )
   - ','
