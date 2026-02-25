@@ -77,9 +77,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CAPS
-  - LEFT CONTROL
-  - HOME
-  - END
+  - UP ARROW
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_RIGHT'
   - '~'
   - '7'
   - '8'
@@ -88,9 +88,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+A
-  - ESC
-  - BACKSPACE
-  - ENTER
+  - LEFT
+  - DOWN
+  - RIGHT
   - DELETE
   - '-'
   - '4'
@@ -125,7 +125,7 @@ layers:
   raise:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Alt+F4
   - Alt+Ctl+Gui+1
   - Alt+Ctl+Gui+2
   - Alt+Ctl+Gui+3
@@ -137,10 +137,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LCTRL
-  - '&msc SCRL_LEFT'
-  - UP ARROW
-  - '&msc SCRL_RIGHT'
+  - HOME
+  - END
   - PAGE UP
+  - PAGE DOWN
   - {t: ▽, type: trans}
   - '&'
   - '*'
@@ -149,10 +149,10 @@ layers:
   - ']'
   - {type: held}
   - LEFT ALT
-  - LEFT
-  - DOWN
-  - RIGHT ARROW
-  - PAGE DOWN
+  - ESCAPE
+  - BACKSPACE
+  - ENTER
+  - DELETE
   - _
   - $
   - '%'
