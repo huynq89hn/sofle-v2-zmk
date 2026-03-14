@@ -28,12 +28,12 @@ layers:
   - raise
   - A
   - R
-  - S
+  - {t: S, h: LSHIFT}
   - T
   - G
   - M
   - N
-  - E
+  - {t: E, h: RSHIFT}
   - I
   - O
   - ''''
