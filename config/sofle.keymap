@@ -4,6 +4,47 @@
 * SPDX-License-Identifier: MIT
 */
 
+#define KEYS_L 0 1 2 3 4 5 6 7 8 9 10 11
+#define KEYS_R 12 13 14 15 16 17 18 19 20 21 22 23
+#define THUMBS 24 25 26 27
+
+/ {
+    behaviors {
+
+        hml: homerow_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_LEFT";
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        hmr: homerow_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_RIGHT";
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+        };
+
+    };
+};
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -37,7 +78,7 @@
             bindings = <
 &kp F1    &kp F2  &kp F3    &kp F4     &kp F5          &kp F6                                                 &kp F7  &kp F8     &kp F9        &kp F10   &kp F11   &kp F12
 &kp TAB   &kp Q   &kp W     &kp F      &kp P           &kp B                                                  &kp J   &kp L      &kp U         &kp Y     &kp SEMI  &kp RGUI
-&mo 2     &kp A   &kp R     &kp S      &kp T           &kp G                                                  &kp M   &kp N      &kp E         &kp I     &kp O     &kp APOS
+&mo 2     &kp A   &kp R     &hml LSHIFT S      &kp T           &kp G                                                  &kp M   &kp N      &hmr RSHIFT E         &kp I     &kp O     &kp APOS
 &kp LALT  &kp Z   &kp X     &kp C      &kp D           &kp V   &kp C_MUTE              &kp ESC                &kp K   &kp H      &kp COMMA     &kp DOT   &kp FSLH  &kp RCTRL
                   &kp LEFT  &kp RIGHT  &kp LEFT_SHIFT  &mo 1   &mt LEFT_SHIFT ENTER    &mt RIGHT_SHIFT SPACE  &mo 0   &kp RSHFT  &kp UP_ARROW  &kp DOWN
             >;
